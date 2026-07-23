@@ -23,22 +23,14 @@ typedef struct {
 } vec2f ;
 
 int main() {
-    vec2f v = {
-        .y = 1,
-    };
+    i32 x = 123;
+    i32* px = &x;
 
-    printf("Vector = < %f, %f >\n", v.x, v.y);
+    printf("%d %p\n", x, px);
 
-    v = (vec2f) {
-        .x = 3, .y = 4
-    };
+    *px = 321;
 
-    printf("Vector = < %f, %f >\n", v.x, v.y);
+    printf("%d %p\n", x, px);
     
-    v.y = 12;
-    v.x = 0;
-
-    printf("Vector = < %f, %f >\n", v.x, v.y);
-
     return 0;
 }
